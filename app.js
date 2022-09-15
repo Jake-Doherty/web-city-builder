@@ -14,12 +14,13 @@ const attrList = document.getElementById('attr-list');
 /* State */
 const city = {
     name: 'Keats',
-    climate: 'Dry',
-    architecture: 'Modern',
-    attractions: ['Tesla Trees', 'The Sphinx'],
+    climate: 'dry',
+    architecture: 'modern',
+    attractions: [],
 };
 
 // console.logs REMOVE BEFORE SUBMIT!!!!!!
+
 console.log(attrInput);
 console.log(attrButton);
 console.log(attrList);
