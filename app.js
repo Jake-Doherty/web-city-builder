@@ -15,7 +15,7 @@ const attrList = document.getElementById('attr-list');
 const city = {
     name: 'Keats',
     climate: 'Dry',
-    architecture: 'Classical',
+    architecture: 'Modern',
     attractions: ['Tesla Trees', 'The Sphinx'],
 };
 
@@ -42,10 +42,18 @@ climateSelect.addEventListener('change', () => {
     displayCity();
 });
 
+archSelect.addEventListener('change', () => {
+    city.architecture = archSelect.value;
+    displayCity();
+});
+
 /* Display Functions */
 function displayCity() {
     nameDisplay.textContent = city.name;
     cliImage.src = 'assets/' + city.climate + '-climate.jpg';
+    cliImage.alt = city.climate;
+    archImage.src = 'assets/' + city.architecture + '-architecture.jpg';
+    archImage.alt = city.architecture;
 }
 
 // (don't forget to call any display functions you want to run on page load!)
