@@ -10,6 +10,7 @@ const nameDisplay = document.getElementById('name-display');
 const cliImage = document.getElementById('cli-image');
 const archImage = document.getElementById('arch-image');
 const attrList = document.getElementById('attr-list');
+const cityArticle = document.getElementById('city-section');
 
 /* State */
 const city = {
@@ -56,6 +57,8 @@ function displayControls() {
 }
 
 function displayCity() {
+    cityArticle.classList.value = '';
+    cityArticle.classList.add(city.climate, city.architecture);
     nameDisplay.textContent = city.name;
     cliImage.src = 'assets/' + city.climate + '-climate.jpg';
     cliImage.alt = city.climate;
@@ -70,7 +73,10 @@ function displayAttractions() {
     for (const attraction of city.attractions) {
         const li = document.createElement('li');
         li.textContent = attraction;
-        attrList.append(li);
+        // not sure if the below is correct to prevent an empty string from being added, but it still works with it added to the code
+        if (li.textContent !== '') {
+            attrList.append(li);
+        }
     }
 }
 
