@@ -44,9 +44,9 @@
                             <option value="tropical">Tropical</option>
                         </select>
                     </label>
-                    <label for="Architecture-selector">
+                    <label for="architecture-selector">
                         Architecture
-                        <select name="Architecture" id="Architecture-selector">
+                        <select name="Architecture" id="architecture-selector">
                             <option value="modern">Modern</option>
                             <option value="classical">Classical</option>
                             <option value="gothic">Gothic</option>
@@ -61,10 +61,18 @@
                     </div>
                 </section>
                 <article id="city-section">
-                    <h2>Welcome To...</h2>
+                    <h2>
+                        Welcome To
+                        <p id="name-display"></p>
+                        ...
+                    </h2>
                     <div id="image-container">
-                        <img src="assets\dry-climate.jpg" alt="dry-climate" />
-                        <img src="assets\classical-architecture.jpg" alt="classical-architecture" />
+                        <img id="cli-image" src="assets\dry-climate.jpg" alt="dry-climate" />
+                        <img
+                            id="arch-image"
+                            src="assets\classical-architecture.jpg"
+                            alt="classical-architecture"
+                        />
                     </div>
                     <div id="attractions-div">
                         <ul>
