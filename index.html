@@ -1,39 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+        <link rel="stylesheet" href="styles\places.css" />
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
-
-</head>
-
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+    <body>
+        <header>
+            <img class="logo" src="assets/html_css_js.png" alt="logo" />
+            <h1>Web App</h1>
+        </header>
+        <main>
+            <div id="app-container">
+                <section id="builder-section">
+                    <h2>City Builder</h2>
+                    <label for="city-name">
+                        Name
+                        <input id="city-name" type="text" />
+                    </label>
+                    <label for="climate-selector">
+                        Climate
+                        <select name="climate" id="climate-selector">
+                            <option value="desert">Dry</option>
+                            <option value="temperate">Temperate</option>
+                            <option value="tropical">Tropical</option>
+                        </select>
+                    </label>
+                    <label for="Architecture-selector">
+                        Architecture
+                        <select name="Architecture" id="Architecture-selector">
+                            <option value="modern">Modern</option>
+                            <option value="classical">Classical</option>
+                            <option value="gothic">Gothic</option>
+                        </select>
+                    </label>
+                    <div>
+                        <label for="attractions-input"> City Attractions </label>
+                        <div id="city-attr-line">
+                            <input id="attractions-input" type="text" />
+                            <button id="attractions-button">+</button>
+                        </div>
+                    </div>
+                </section>
+                <article id="city-section">
+                    <h2>Welcome To...</h2>
+                    <div id="image-container">
+                        <img src="assets\dry-climate.jpg" alt="dry-climate" />
+                        <img src="assets\classical-architecture.jpg" alt="classical-architecture" />
+                    </div>
+                    <ul>
+                        Make Sure To Checkout Our..
+                        <li>Best Ice Cream</li>
+                        <li>Worlds Largest Pool</li>
+                        <li>Free Bottomless Pizza</li>
+                    </ul>
+                </article>
+            </div>
+        </main>
+    </body>
 </html>
