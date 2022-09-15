@@ -20,12 +20,6 @@ const city = {
     attractions: [],
 };
 
-// console.logs REMOVE BEFORE SUBMIT!!!!!!
-
-console.log(attrInput);
-console.log(attrButton);
-console.log(attrList);
-
 /* Events */
 nameInput.addEventListener('input', () => {
     city.name = nameInput.value;
