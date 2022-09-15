@@ -41,6 +41,13 @@ archSelect.addEventListener('change', () => {
     displayCity();
 });
 
+attrButton.addEventListener('click', () => {
+    const newAttraction = attrInput.value;
+    city.attractions.push(newAttraction);
+    displayAttractions();
+    attrInput.value = '';
+});
+
 /* Display Functions */
 function displayControls() {
     nameInput.value = city.name;
@@ -56,6 +63,18 @@ function displayCity() {
     archImage.alt = city.architecture;
 }
 
+function displayAttractions() {
+    // clear the list with this
+    attrList.innerHTML = '';
+
+    for (const attraction of city.attractions) {
+        const li = document.createElement('li');
+        li.textContent = attraction;
+        attrList.append(li);
+    }
+}
+
 // (don't forget to call any display functions you want to run on page load!)
 displayControls();
 displayCity();
+displayAttractions();

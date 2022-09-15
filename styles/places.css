@@ -22,7 +22,7 @@ label {
 }
 
 #builder-section {
-    /* height: 250px; */
+    height: 220px;
     padding: 5px;
     display: grid;
     gap: 5px;
