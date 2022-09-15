@@ -20,20 +20,13 @@ const city = {
 };
 
 // console.logs REMOVE BEFORE SUBMIT!!!!!!
-console.log(nameInput);
-console.log(climateSelect);
-console.log(archSelect);
 console.log(attrInput);
-console.log(city);
 console.log(attrButton);
-console.log(nameDisplay);
-console.log(cliImage);
-console.log(archImage);
 console.log(attrList);
 
 /* Events */
 nameInput.addEventListener('input', () => {
-    nameDisplay.textContent = nameInput.value;
+    city.name = nameInput.value;
     displayCity();
 });
 
@@ -48,6 +41,12 @@ archSelect.addEventListener('change', () => {
 });
 
 /* Display Functions */
+function displayControls() {
+    nameInput.value = city.name;
+    climateSelect.value = city.climate;
+    archSelect.value = city.architecture;
+}
+
 function displayCity() {
     nameDisplay.textContent = city.name;
     cliImage.src = 'assets/' + city.climate + '-climate.jpg';
@@ -57,4 +56,5 @@ function displayCity() {
 }
 
 // (don't forget to call any display functions you want to run on page load!)
+displayControls();
 displayCity();
