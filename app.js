@@ -78,3 +78,5 @@ function displayAttractions() {
 displayControls();
 displayCity();
 displayAttractions();
+
+// not sure if i needed to add a change for the push to go up, so here it is.
